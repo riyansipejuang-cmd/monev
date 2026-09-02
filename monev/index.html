@@ -204,9 +204,7 @@
 
 <script>
     const form = document.getElementById('monevForm');
-    
-    // Masukkan URL Web App Google Apps Script Anda di sini:
-const scriptURL = 'https://script.google.com/macros/s/AKfycbxGjy-bhAZ6ufWLL-2ixvPdozUy9ja0weUK80f7LIDbypLkctj88ygGw-v-RqWc3FEGAQ/exec';
+    const scriptURL = https://script.google.com/macros/s/AKfycbx3nabr97ziL8bYOizg6BeHWbRd7Qz1mRJVip20OF2nBUssyWqaCBGj-4IkrTl2O4BXKw/exec
 
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -217,13 +215,15 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbxGjy-bhAZ6ufWLL-2ixv
 
         const formData = new FormData(form);
         const data = {};
-        formData.forEach((value, key) => (data[key] = value));
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
 
         fetch(scriptURL, {
             method: 'POST',
-            mode: 'no-cors', // Penting agar tidak terkena blokir CORS dari browser
+            mode: 'no-cors', // Diperlukan agar tidak terblokir browser saat kirim ke Apps Script
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'text/plain;charset=utf-8',
             },
             body: JSON.stringify(data)
         })
