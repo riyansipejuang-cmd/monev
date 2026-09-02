@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Monev PKP Mandiri PPK Ormawa UNIMUDA Sorong</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            background: #fff;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+        h2 {
+            text-align: center;
+            color: #0056b3;
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            vertical-align: top;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+        }
+        td.text-center {
+            text-align: center;
+        }
+        .desc {
+            font-size: 14px;
+            color: #555;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-image">
+        <img src="lemawa.jpg" alt="Banner Sistem Monev UNIMUDA">
+    </div>
+
+    <h2>BLUEPRINT SISTEM MONEV</h2>
+    <p class="subtitle">SISTEM PKP MANDIRI PPK ORMAWA UNIMUDA SORONG</p>
+
+    <form id="monevForm">
+        <div class="form-group">
+            <label for="nama_pemonev">NAMA PEMONEV:</label>
+            <input type="text" id="nama_pemonev" name="nama_pemonev" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal_monev">TANGGAL MONEV:</label>
+            <input type="date" id="tanggal_monev" name="tanggal_monev" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nama_ketua">NAMA KETUA TIM:</label>
+            <input type="text" id="nama_ketua" name="nama_ketua" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nama_tim">NAMA TIM:</label>
+            <input type="text" id="nama_tim" name="nama_tim" required>
+        </div>
+
+        <div class="form-group">
+            <label for="judul_ppko">JUDUL PPKO:</label>
+            <input type="text" id="judul_ppko" name="judul_ppko" required>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Komponen Penilaian</th>
+                    <th style="width: 55%;">Keterangan / Deskripsi</th>
+                    <th style="width: 20%;">Pilih Nilai (1 - 5)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ketercapaian Tujuan</strong></td>
+                    <td class="desc">Jumlah rumusan tujuan yang telah ditulis di subproposal yang telah diperbaiki dan perkiraan capaian tujuan pada saat PKP Internal Perguruan Tinggi PPK Ormawa 2026 adalah minimal sebesar 70%.</td>
+                    <td class="text-center">
+                        <input type="radio" name="tujuan" value="1" required> 1 <br>
+                        <input type="radio" name="tujuan" value="2"> 2 <br>
+                        <input type="radio" name="tujuan" value="3"> 3 <br>
+                        <input type="radio" name="tujuan" value="4"> 4 <br>
+                        <input type="radio" name="tujuan" value="5"> 5
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ketercapaian Indikator Keberhasilan Sesuai Topik</strong></td>
+                    <td class="desc">Persentase capaian indikator keberhasilan sesuai topik dan perkiraan capaian indikator pada saat PKP Internal Perguruan Tinggi PPK Ormawa 2026 minimal 70%.</td>
+                    <td class="text-center">
+                        <input type="radio" name="indikator" value="1" required> 1 <br>
+                        <input type="radio" name="indikator" value="2"> 2 <br>
+                        <input type="radio" name="indikator" value="3"> 3 <br>
+                        <input type="radio" name="indikator" value="4"> 4 <br>
+                        <input type="radio" name="indikator" value="5"> 5
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Potensi Keberlanjutan</strong></td>
+                    <td class="desc">Pernyataan persentase peluang keberlanjutan program yang didukung dengan kepemilikan faktor-faktor pendukung apa saja yang menyebabkan PPK Ormawa 2026 memiliki potensi keberlanjutan tersebut.</td>
+                    <td class="text-center">
+                        <input type="radio" name="keberlanjutan" value="1" required> 1 <br>
+                        <input type="radio" name="keberlanjutan" value="2"> 2 <br>
+                        <input type="radio" name="keberlanjutan" value="3"> 3 <br>
+                        <input type="radio" name="keberlanjutan" value="4"> 4 <br>
+                        <input type="radio" name="keberlanjutan" value="5"> 5
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Dukungan Para Pihak</strong></td>
+                    <td class="desc">Kontribusi riil ormawa, PT, dosen pendamping dan mitra eksternal dalam mendukung program PPK Ormawa secara komprehensif.</td>
+                    <td class="text-center">
+                        <input type="radio" name="dukungan_pihak" value="1" required> 1 <br>
+                        <input type="radio" name="dukungan_pihak" value="2"> 2 <br>
+                        <input type="radio" name="dukungan_pihak" value="3"> 3 <br>
+                        <input type="radio" name="dukungan_pihak" value="4"> 4 <br>
+                        <input type="radio" name="dukungan_pihak" value="5"> 5
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Kontribusi Desa</strong></td>
+                    <td class="desc">Kontribusi riil Desa (Pemdes, tokoh masyarakat, Lembaga-lembaga desa, dll) dalam mendukung program PPK Ormawa secara komprehensif.</td>
+                    <td class="text-center">
+                        <input type="radio" name="kontribusi_desa" value="1" required> 1 <br>
+                        <input type="radio" name="kontribusi_desa" value="2"> 2 <br>
+                        <input type="radio" name="kontribusi_desa" value="3"> 3 <br>
+                        <input type="radio" name="kontribusi_desa" value="4"> 4 <br>
+                        <input type="radio" name="kontribusi_desa" value="5"> 5
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit" id="submitBtn">Kirim Penilaian Monev</button>
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('monevForm');
+    
+    // Masukkan URL Web App Google Apps Script Anda di sini:
+    const scriptURL = https://script.google.com/macros/s/AKfycbyIA7QiJVYD6xDc-YQ_VbULs3_gb-D5Ep4E52ZLJftPzK4ldt70A69xW5prubunXGZmnw/exec
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        
+        const btn = document.getElementById('submitBtn');
+        btn.disabled = true;
+        btn.textContent = 'Mengirim data...';
+
+        const formData = new FormData(form);
+        const data = {};
+        formData.forEach((value, key) => (data[key] = value));
+
+        fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors', // Penting agar tidak terkena blokir CORS dari browser
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+        .then(() => {
+            alert('Penilaian berhasil dikirim dan masuk ke Google Spreadsheet!');
+            form.reset();
+            btn.disabled = false;
+            btn.textContent = 'Kirim Penilaian Monev';
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            alert('Terjadi kesalahan, gagal mengirim data.');
+            btn.disabled = false;
+            btn.textContent = 'Kirim Penilaian Monev';
+        });
+    });
+</script>
+
+</body>
+</html>
