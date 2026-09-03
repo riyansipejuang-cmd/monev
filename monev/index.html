@@ -50,18 +50,23 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], input[type="date"] {
+        input[type="text"], input[type="date"], textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         th, td {
             border: 1px solid #ddd;
@@ -89,6 +94,7 @@
             cursor: pointer;
             font-size: 16px;
             width: 100%;
+            margin-top: 15px;
         }
         button:hover {
             background-color: #218838;
@@ -102,8 +108,8 @@
         <img src="lemawa.jpg" alt="Banner Sistem Monev UNIMUDA">
     </div>
 
-    <h2>BLUEPRINT SISTEM MONEV</h2>
-    <p class="subtitle">SISTEM PKP MANDIRI PPK ORMAWA UNIMUDA SORONG</p>
+    <h2>SISTEM PKP MANDIRI PPK ORMAWA</h2>
+    <p class="subtitle">UNIVERSITAS PENDIDIKAN MUHAMMADIYAH UNIMUDA SORONG</p>
 
     <form id="monevForm">
         <div class="form-group">
@@ -198,13 +204,19 @@
             </tbody>
         </table>
 
+        <!-- Catatan Pemonev di bawah tabel -->
+        <div class="form-group">
+            <label for="catatan_pemonev">CATATAN PEMONEV / REKOMENDASI:</label>
+            <textarea id="catatan_pemonev" name="catatan_pemonev" placeholder="Tuliskan catatan atau rekomendasi hasil monev di sini..."></textarea>
+        </div>
+
         <button type="submit" id="submitBtn">Kirim Penilaian Monev</button>
     </form>
 </div>
 
 <script>
     const form = document.getElementById('monevForm');
-    const scriptURL = https://script.google.com/macros/s/AKfycbx3nabr97ziL8bYOizg6BeHWbRd7Qz1mRJVip20OF2nBUssyWqaCBGj-4IkrTl2O4BXKw/exec
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwdFBD-jJzQI6E-9WwrSrKBTyO4Pzh3lyD-AbVsuMUm5Pn7U71Vq4l-qOYZcAeDV9LCjw/exec';
 
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -221,7 +233,7 @@
 
         fetch(scriptURL, {
             method: 'POST',
-            mode: 'no-cors', // Diperlukan agar tidak terblokir browser saat kirim ke Apps Script
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'text/plain;charset=utf-8',
             },
